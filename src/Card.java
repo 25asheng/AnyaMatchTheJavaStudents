@@ -37,8 +37,17 @@ public class Card {
         Main.app.fill(66, 8, 3);
         Main.app.textSize(20);
         Main.app.text(name, x + 30, y + 60);
-
     }
+    public void isGreen(){
+        Main.app.stroke(30, 33, 94);
+        Main.app.fill(15, 200, 20);
+        Main.app.rect(x, y, 100, 100);
+
+        Main.app.fill(3, 66, 8);
+        Main.app.textSize(20);
+        Main.app.text(name, x + 30, y + 60);
+    }
+
 
     public String getName(){
         return name;
