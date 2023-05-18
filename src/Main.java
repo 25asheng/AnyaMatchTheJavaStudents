@@ -112,7 +112,7 @@ public class Main extends PApplet{
         prevCard.isGreen();
         thisCard.isGreen();
     }
-
+//oop
     public void isWrong(){
         //System.out.println("at the moment of calling isWrong right before making isRed, thisCard is: " + thisCard.getIsFlipped());
         prevCard.isRed();
