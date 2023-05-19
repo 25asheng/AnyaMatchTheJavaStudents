@@ -10,11 +10,16 @@ public class Main extends PApplet{
     private Card thisCard = new Card(0,0,"dolor.");;
     private boolean onSecond = false;
     private String[] names = {"Izzy", "Mika", "Bala", "Julia", "Kailee", "Caitlyn", "Ms.Greyson", "Michelle", "Claire", "Naya", "Anya", "Anaika","Norah"};
+    private ArrayList<Card> greysonAdj = new ArrayList<Card>();
     private int countMoves;
     private int countDraw;
     private int countFound;
     private boolean isDone = false;
     private boolean isWrong = false;
+    private boolean clickGreyson = false;
+    private Card greyson;
+    private int greysonX;
+    private int greysonY;
 
 
     public static void main(String[] args){
@@ -46,35 +51,40 @@ public class Main extends PApplet{
         }
         myCards[2][2] = new Card(0,0,names[6]);
 
-        //scramble();
+        scramble();
 
 
     }
 
     public void draw(){
         countDraw++;
-        //System.out.println("draw called, count = " + countDraw);
         for(int i = 0; i < myCards.length; i++) {
             for (int j = 0; j < myCards[0].length; j++) {
                 myCards[i][j].setXY(20 + 115 * j, 20 + 115 * i);
-                //System.out.println("I am setting the Card with name: " + myCards[i][j].getName() + " at position x = " + (20 + 115 * j) + " and y = " + (20 + 115 * i));
                 myCards[i][j].display();
             }
         }
+
 
         if(isWrong) {
             isWrong();
         }
 
+        if(clickGreyson){
+            clickGreyson();
+        }
+
+
         if(countFound == 25){
             isDone = true;
 
             fill(160,120,255);
-            rect(290,695,170,43);
+            rect(290,695,170,44);
 
             fill(60,0,80);
+            textAlign(CENTER);
             textSize(25);
-            text("Click to retry!",300,725);
+            text("Click to retry!",375,725);
         }
 
     }
@@ -84,19 +94,22 @@ public class Main extends PApplet{
 
     public void mouseClicked(){
         System.out.println("mouseClicked");
-        System.out.println(onSecond);
 
         if(!isDone && !isWrong) {
 
-            for (Card[] arr : myCards) {
-                for (Card card : arr) {
+            for (int i = 0; i < myCards.length; i++) {
+                for (int j = 0; j < myCards[i].length; j++) {
+                    Card card = myCards[i][j];
                     if (!card.getIsFlipped()) {
-                        //System.out.println(mouseX > card.getX() && mouseX < card.getX() + 100 && mouseY > card.getY() && mouseY < card.getY() + 100);
                         boolean clickedCard = mouseX > card.getX() && mouseX < card.getX() + 100 && mouseY > card.getY() && mouseY < card.getY() + 100;
-                        //boolean doubleClicked = card.isDouble(prevCard);
                         if (clickedCard) { //clicks on that Card
                             if (card.getName().equals("Ms.Greyson")){
-                                clickGreyson(card); //to-do: clear prevCard in clickGreyson method
+                                clickGreyson = true;
+                                countDraw = 0;
+                                greyson = card;
+                                greysonX = i;
+                                greysonY = j;
+
                             } else if (onSecond) {
                                 thisCard = card;
                                 thisCard.setIsFlipped(true);
@@ -116,16 +129,11 @@ public class Main extends PApplet{
                             }
                             countMoves++;
                         }
-                        //System.out.println("INNER");
                     }
                 }
-                //System.out.println("finished iterating outer loop once");
             }
         } else {
-            System.out.println("got to else");
-            System.out.println("mouseX: " + mouseX + "\nmouseY: " + mouseY);
             if(mouseX >= 290 && mouseX <= 460 && mouseY >= 695 && mouseY <= 738){
-                System.out.println("calling reset");
                 reset();
             }
         }
@@ -141,9 +149,54 @@ public class Main extends PApplet{
         countFound += 2;
     }
 
-    public void clickGreyson(Card greyson){
-        countFound++;
-        greyson.setIsFlipped(true); //fix
+    public void clickGreyson(){
+        System.out.println(countFound);
+
+        if(countDraw == 1){ //first time called
+            System.out.println("reached countDraw == 1 for clickGreyson");
+            greyson.setIsFlipped(true); //fix
+
+            if(onSecond){
+                prevCard.setIsFlipped(false);
+                onSecond = false;
+            }
+
+            if(greysonX != 0){
+                greysonAdj.add(myCards[greysonX - 1][greysonY]);
+            }
+
+            if(greysonX != myCards.length - 1){
+                greysonAdj.add(myCards[greysonX + 1][greysonY]);
+            }
+
+            if(greysonY != 0){
+                greysonAdj.add(myCards[greysonX][greysonY - 1]);
+            }
+
+            if(greysonY != myCards[0].length - 1){
+                greysonAdj.add(myCards[greysonX][greysonY + 1]);
+            }
+
+            for(Card adjCard: greysonAdj){
+                adjCard.isYellow();
+            }
+
+        }
+
+        //turn surrounding yellow
+        //account for if sides
+        //if statement for each to determine if valid position
+        //can't do that within if loop first time because it'll get drawn over with-
+        //-the calls to display (normal color) repeated in draw
+
+
+
+        if(countDraw % 100 == 0){
+            //flip back cards that are not isFlipped
+            countFound++;
+            System.out.println(countFound);
+            clickGreyson = false;
+        }
     }
 
     public void isWrong(){
@@ -179,10 +232,14 @@ public class Main extends PApplet{
         }
     }
 
-    public void reset(){ //fix repeated use of reset
+    public void reset(){
         System.out.println("reset");
+
         fill(262, 217, 222); //cover "Click to retry" box
+        noStroke();
         rect(285,690,180,53);
+
+        scramble();
 
         prevCard = new Card(0,0,"Lorem Ipsum!!");
         thisCard = new Card(0,0,"dolor.");;
@@ -193,8 +250,43 @@ public class Main extends PApplet{
         isDone = false;
         isWrong = false;
 
-        //iterate through all to flip back
+
+        for(int i = 0; i < myCards.length; i++) {
+            for (int j = 0; j < myCards[0].length; j++) {
+                myCards[i][j].setIsFlipped(false);
+            }
+        }
 
     }
+
+    /*
+
+    public void infoDisplay(){
+        clickToRetry();
+        //and other text methods
+
+
+    }
+
+    private void clickToRetry(){
+        if(clickToRetry){
+            fill(160,120,255);
+            rect(290,695,170,44);
+
+            fill(60,0,80);
+            textAlign(CENTER);
+            textSize(25);
+            text("Click to retry!",375,725);
+        } else {
+            fill(262, 217, 222); //cover "Click to retry" box
+            noStroke();
+            rect(285,690,180,53);
+
+        }
+    }
+
+
+    */
+
 
 }

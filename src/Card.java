@@ -48,6 +48,15 @@ public class Card {
         Main.app.text(name, x + 30, y + 60);
     }
 
+    public void isYellow(){
+        Main.app.stroke(30, 33, 94);
+        Main.app.fill(15, 200, 20); //switch to yellow
+        Main.app.rect(x, y, 100, 100);
+
+        Main.app.fill(3, 66, 8); //switch to yellow
+        Main.app.textSize(20);
+        Main.app.text(name, x + 30, y + 60);
+    }
 
     public String getName(){
         return name;
