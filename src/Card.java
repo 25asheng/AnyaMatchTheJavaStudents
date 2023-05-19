@@ -84,9 +84,4 @@ public class Card {
         return this.name.equals(other.getName());
     }
 
-    /*
-    public boolean isDouble(Card other){
-        return this.x == other.getX() && this.y == other.getY();
-    }
-    */
 }
