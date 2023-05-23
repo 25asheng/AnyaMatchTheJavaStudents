@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e705fa-da51-4ae9-8e92-66505ced1f34" name="Changes" comment="Implemented counts, separated Ms. Greyson, and reset function (with bugs)">
+    <list default="true" id="41e705fa-da51-4ae9-8e92-66505ced1f34" name="Changes" comment="finished Ms. Greyson method: game is now very playable">
+      <change afterPath="$PROJECT_DIR$/Anaika.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Anya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Caitlyn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Claire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Izzy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Julia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kailee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Michelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mika.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ms.Greyson.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Naya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Norah.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -24,6 +37,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2b18f042-dab8-4a55-a431-d678118b3be4" />
+        <option name="url" value="https://github.com/25asheng/AnyaMatchTheJavaStudents.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,6 +68,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684521439363</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="worked on Ms. Greyson method">
+      <created>1684538673434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684538673434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,7 +140,8 @@
     <MESSAGE value="Fixed display issue and finished Step 3" />
     <MESSAGE value="Fixed display issue and finished step 3" />
     <MESSAGE value="Implemented counts, separated Ms. Greyson, and reset function (with bugs)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented counts, separated Ms. Greyson, and reset function (with bugs)" />
+    <MESSAGE value="worked on Ms. Greyson method" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on Ms. Greyson method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
