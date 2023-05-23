@@ -38,6 +38,7 @@ public class Main extends PApplet{
     }
 
     public void setup() {
+        System.out.println("OG frameRate is: " + frameRate);
         background(262, 217, 222);
 
         for(int i = 0; i < myCards.length; i++){
@@ -54,7 +55,7 @@ public class Main extends PApplet{
         }
         myCards[2][2].setupImage(imgNames[6]);
 
-        scramble();
+        //scramble();
     }
 
 
@@ -96,7 +97,7 @@ public class Main extends PApplet{
 
 
     public void mouseClicked(){
-        //System.out.println("mouseClicked");
+        System.out.println("mouseClicked");
 
         if(!isDone && !isWrong && !clickGreyson) {
 
@@ -106,7 +107,7 @@ public class Main extends PApplet{
                     if (!card.getIsFlipped()) {
                         boolean clickedCard = mouseX > card.getX() && mouseX < card.getX() + 100 && mouseY > card.getY() && mouseY < card.getY() + 100;
                         if (clickedCard) { //clicks on that Card
-                            if (card.getImg().equals(Main.app.loadImage(imgNames[6]))){
+                            if (card.getImgName().equals(imgNames[6])){
                                 clickGreyson = true;
                                 countDraw = 0;
                                 greyson = card;
@@ -141,28 +142,18 @@ public class Main extends PApplet{
             }
         }
 
-        //System.out.println(onSecond);
 
 
     }
 
     public void isRight(){
-        //frameRate(1);
         prevCard.isGreen();
         thisCard.isGreen();
-        /*
-        System.out.println("start delay");
-        delay(3500);
-        System.out.println("end delay");
-         */
-        //frameRate(50);
-
         countFound += 2;
     }
 
     public void clickGreyson(){
         if(countDraw == 1){ //first time called
-            System.out.println("reached countDraw == 1 for clickGreyson");
             greyson.setIsFlipped(true); //fix
 
             if(onSecond){
@@ -186,26 +177,20 @@ public class Main extends PApplet{
 
         for(Card adjCard: greysonAdj){
             adjCard.isYellow();
-            System.out.println("just made adjCard with x:" + adjCard.getX() + " and y: "+ adjCard.getY() + " yellow");
         }
 
         if(countDraw % 100 == 0){
             //flip back cards that are not isFlipped
-            System.out.println("found countDraw % 100 == 0");
             countFound++;
-            System.out.println(countFound);
             clickGreyson = false;
             countDraw = 0;
         }
     }
 
     public void isWrong(){
-        //System.out.println("at the moment of calling isWrong right before making isRed, thisCard is: " + thisCard.getIsFlipped());
         prevCard.isRed();
         thisCard.isRed();
-        //System.out.println("before while loop isWrong, is:" + countDraw);
         if (countDraw % 30 == 0) {
-            //System.out.println("when flipping back:" + countDraw);
             prevCard.setIsFlipped(false);
             thisCard.setIsFlipped(false);
             countDraw = 0;
@@ -234,6 +219,7 @@ public class Main extends PApplet{
 
     public void reset(){
         System.out.println("reset");
+        greysonAdj = new ArrayList<Card>();
 
         fill(262, 217, 222); //cover "Click to retry" box
         noStroke();

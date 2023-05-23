@@ -6,6 +6,7 @@ public class Card {
     private int x;
     private int y;
     private PImage img;
+    private String imgName;
     private boolean isFlipped;
 
     public Card(int x, int y){
@@ -21,12 +22,6 @@ public class Card {
             Main.app.rect(x, y, 100, 100);
 
         } else {
-            Main.app.stroke(30, 33, 94);
-            Main.app.fill(157, 159, 204);
-            Main.app.rect(x, y, 100, 100);
-
-            //Main.app.fill(30, 33, 94);
-            //Main.app.textSize(20);
             Main.app.imageMode(Main.app.CENTER);
             Main.app.image(img, x + 50, y + 50, 100, 100);
 
@@ -36,44 +31,36 @@ public class Card {
 
     public void setupImage(String imageName) {
         img = Main.app.loadImage(imageName);
+        imgName = imageName;
     }
 
 
     public void isRed(){
-        Main.app.stroke(30, 33, 94);
-        Main.app.fill(200, 20, 15);
-        Main.app.rect(x, y, 100, 100);
 
-        Main.app.fill(66, 8, 3);
-        Main.app.textSize(20);
+        Main.app.tint(255, 0, 0, 150);
         Main.app.imageMode(Main.app.CENTER);
         Main.app.image(img, x + 50, y + 50, 100, 100);
+        Main.app.noTint();// turns off tint effect after the image is displayed
     }
     public void isGreen(){
-        Main.app.stroke(30, 33, 94);
-        Main.app.fill(15, 200, 20);
-        Main.app.rect(x, y, 100, 100);
-
-        Main.app.fill(3, 66, 8);
-        Main.app.textSize(20);
+        Main.app.tint(0, 255, 0, 150);
         Main.app.imageMode(Main.app.CENTER);
         Main.app.image(img, x + 50, y + 50, 100, 100);
+        Main.app.noTint();// turns off tint effect after the image is displayed
     }
 
     public void isYellow(){
-        System.out.println("reached isYellow");
-        Main.app.stroke(30, 33, 94);
-        Main.app.fill(237, 221, 71); //switch to yellow
-        Main.app.rect(x, y, 100, 100);
 
-        Main.app.fill(156, 142, 11); //switch to yellow
-        Main.app.textSize(20);
+        Main.app.tint(160, 140, 10, 150);
         Main.app.imageMode(Main.app.CENTER);
         Main.app.image(img, x + 50, y + 50, 100, 100);
+        Main.app.noTint();// turns off tint effect after the image is displayed
+
+        //Main.app.fill(156, 142, 11); //switch to yellow
     }
 
-    public PImage getImg(){
-        return img;
+    public String getImgName(){
+        return imgName;
     }
 
     public int getX(){
@@ -104,10 +91,7 @@ public class Card {
 
 
     public boolean equals(Card other){
-        System.out.println(this.img);
-        System.out.println(other.getImg());
-        System.out.println(this.img.equals(other.getImg()));
-        return this.img.equals(other.getImg());
+        return this.imgName.equals(other.getImgName());
     }
 
 }
