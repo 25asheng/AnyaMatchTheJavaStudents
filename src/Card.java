@@ -5,14 +5,17 @@ import processing.core.PImage;
 public class Card {
     private int x;
     private int y;
+    private int wasted;
     private PImage img;
     private String imgName;
     private boolean isFlipped;
 
-    public Card(int x, int y){
+    public Card(int x, int y, String imageName){
         this.x = x;
         this.y = y;
         isFlipped = false;
+        img = Main.app.loadImage(imageName);
+        imgName = imageName;
     }
 
     public void display() {
@@ -28,11 +31,6 @@ public class Card {
         }
     }
 
-
-    public void setupImage(String imageName) {
-        img = Main.app.loadImage(imageName);
-        imgName = imageName;
-    }
 
 
     public void isRed(){
@@ -57,6 +55,14 @@ public class Card {
         Main.app.noTint();// turns off tint effect after the image is displayed
 
         //Main.app.fill(156, 142, 11); //switch to yellow
+    }
+
+    public void wasted(){
+        wasted++;
+    }
+
+    public int getWasted(){
+        return wasted;
     }
 
     public String getImgName(){
