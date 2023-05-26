@@ -1,16 +1,15 @@
 public class boardEntry {
-    private String name;
-    private int y;
+    private final String name;
+    private int index;
     private int score;
 
-    public boardEntry(int theScore, String theName, int theY){
+    public boardEntry(int theScore, String theName){
         name = theName;
         score = theScore;
-        y = theY;
     }
 
-    public void setY(int newY){
-        y = newY;
+    public void setIndex(int newIndex){
+        index = newIndex;
     }
 
     public int getScore(){
@@ -25,11 +24,12 @@ public class boardEntry {
         score = newScore;
     }
 
-    public void display(){
-        Main.app.fill(0,0,0);
-        Main.app.textSize(22);
-        Main.app.textAlign(Main.app.LEFT,Main.app.CENTER);
-        Main.app.text(score + "          " + name,200,y);
+    public void display() { //assume is going into black fill, text left center, and text size 18
+        if (index < 14) {
+            Main.app.text(index + "                " + score + "                " + name, 200, 50 + index * 20);
+        } else {
+            Main.app.text(index + "                " + score + "                " + name, 200, 50 + (index-13) * 20);
+        }
     }
 }
 
@@ -38,5 +38,3 @@ public class boardEntry {
 //THIS: upload fruit images
 //THIS: make starting screen display
 //THIS: adjust mouseClicked for starting screen display
-
-//THIS: write up insertion sort technique for arraylist

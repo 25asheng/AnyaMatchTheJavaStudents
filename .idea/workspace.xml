@@ -4,25 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e705fa-da51-4ae9-8e92-66505ced1f34" name="Changes" comment="fully implemented color tints for images, program runs well, only need little edits now">
-      <change afterPath="$PROJECT_DIR$/src/boardEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaStudents/leaderboard" afterDir="false" />
+    <list default="true" id="41e705fa-da51-4ae9-8e92-66505ced1f34" name="Changes" comment="FINAL PUSH: finished importing my four datasets, set up a menu with interactive buttons for switching between datasets and convenient commands. worked mostly on aesthetics and display, and polishing.">
+      <change afterPath="$PROJECT_DIR$/src/fruits/Apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Banana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Blackberries.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Blueberries.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Dragon_fruit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Grapes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Kiwi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Mango.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Pear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Raspberries.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Strawberries.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/Tomato.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fruits/leaderboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/AmericanShorthair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Beluga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Calico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/EgyptianMau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Ginger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Munchkin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Naked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Persian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Ragdoll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/RussianBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Siamese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Toothless.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/Tortie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/typesOfCats/leaderboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikaika.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikailee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikaitlyn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikanya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikaya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikbala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikeveryone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikizzy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Miklaire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikorah.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikreyson.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/Mikulia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/warpedMikas/leaderboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Anaika.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Anaika.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Anya.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Anya.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bala.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Bala.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Caitlyn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Caitlyn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Claire.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Claire.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Izzy.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Izzy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Julia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Julia.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kailee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Kailee.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Michelle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Michelle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mika.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Mika.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ms.Greyson.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Ms.Greyson.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Naya.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Naya.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Norah.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/Norah.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boardEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boardEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaStudents/leaderboard" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaStudents/leaderboard" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +84,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2PszjJlLS66pYY2b7CFbVUHewh2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -67,14 +99,17 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/warpedMikas" />
+      <recent name="$PROJECT_DIR$/src/typesOfCats" />
+      <recent name="$PROJECT_DIR$/src/javaStudents" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/javaStudents" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/fruits" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -149,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684875587160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fully implemented color tints for images, program runs well, added start screen and ending screen, created leaderboard (with real data), and plan to create different sets of images to compare (with different leaderboards)">
+      <created>1684991380306</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684991380306</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -161,7 +203,9 @@
     <MESSAGE value="worked on Ms. Greyson method" />
     <MESSAGE value="finished Ms. Greyson method. Replaced names with properly displaying images: still unable to properly compare images" />
     <MESSAGE value="fully implemented color tints for images, program runs well, only need little edits now" />
-    <option name="LAST_COMMIT_MESSAGE" value="fully implemented color tints for images, program runs well, only need little edits now" />
+    <MESSAGE value="fully implemented color tints for images, program runs well, added start screen and ending screen, created leaderboard (with real data), and plan to create different sets of images to compare (with different leaderboards)" />
+    <MESSAGE value="FINAL PUSH: finished importing my four datasets, set up a menu with interactive buttons for switching between datasets and convenient commands. worked mostly on aesthetics and display, and polishing." />
+    <option name="LAST_COMMIT_MESSAGE" value="FINAL PUSH: finished importing my four datasets, set up a menu with interactive buttons for switching between datasets and convenient commands. worked mostly on aesthetics and display, and polishing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -172,5 +216,8 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AnyaMatchTheJavaStudents$Main.ic" NAME="Main Coverage Results" MODIFIED="1685036066918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

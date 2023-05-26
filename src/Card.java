@@ -6,8 +6,8 @@ public class Card {
     private int x;
     private int y;
     private int wasted;
-    private PImage img;
-    private String imgName;
+    private final PImage img;
+    private final String imgName;
     private boolean isFlipped;
 
     public Card(int x, int y, String imageName){
@@ -18,8 +18,14 @@ public class Card {
         imgName = imageName;
     }
 
+
+    public boolean clickedOn(int mouseX, int mouseY){
+        return mouseX > x  && mouseX < x + 100 && mouseY > y && mouseY < y + 100;
+    }
+
     public void display() {
         if(!isFlipped){
+            Main.app.rectMode(Main.app.CORNER);
             Main.app.stroke(30, 33, 94);
             Main.app.fill(80, 83, 143);
             Main.app.rect(x, y, 100, 100);
@@ -64,26 +70,18 @@ public class Card {
     public int getWasted(){
         return wasted;
     }
+    public void setWasted(int newWasted){
+        wasted = newWasted;
+    }
 
     public String getImgName(){
         return imgName;
-    }
-
-    public int getX(){
-        return x;
-    }
-
-    public int getY(){
-        return y;
     }
 
     public boolean getIsFlipped(){
         return isFlipped;
     }
 
-    public void setImg(PImage newImg){
-        img = newImg;
-    }
 
 
     public void setXY(int x, int y){
