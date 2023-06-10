@@ -12,7 +12,6 @@ public class Main extends PApplet{
     private Card prevCard;
     private Card thisCard;
 
-    //51 quinton, 60 mitchell, 48 kelsey, 41 mika, 41 anya, 69 emma, 53 raterman, 49 chloey
     //Datasets
     private String[] usingData;
     private String usingName = "";
@@ -26,11 +25,11 @@ public class Main extends PApplet{
 
     private final ArrayList<boardEntry> javaStudentsBoardEntries = new ArrayList<>(Arrays.asList(new boardEntry(51, "quinton"),
             new boardEntry(60, "mitchell"), new boardEntry(48,"kelsey"),
-            new boardEntry(41,"mika"), new boardEntry( 41,"anya"),
-            new boardEntry(69, "my little sister"),new boardEntry( 53, "raterman"),
+            new boardEntry(39,"mika"), new boardEntry( 41,"anya"),
+            new boardEntry(67, "my little sister"),new boardEntry( 53, "raterman"),
             new boardEntry(47, "chloe"), new boardEntry(59,"my mom"), new boardEntry(62,"my dad"),
             new boardEntry(32, "diya"), new boardEntry(44,"tucker"), new boardEntry(46,"aasiya"),
-            new boardEntry(69, "your mom")));
+            new boardEntry(41, "seroff"), new boardEntry(59,"henry")));
 
     private final String[] fruits = {"fruits/Apple.png","fruits/Banana.png",
             "fruits/Orange.png","fruits/Grapes.png","fruits/Blueberries.png",
@@ -39,7 +38,9 @@ public class Main extends PApplet{
             "fruits/Mango.png","fruits/Tomato.png", "Fruits"};
 
     private final ArrayList<boardEntry> fruitsBoardEntries = new ArrayList<>(Arrays.asList(new boardEntry(44,"ruby"),
-            new boardEntry(40,"anya"),new boardEntry(56,"my mom"),new boardEntry(69, "my dad")));
+            new boardEntry(40,"anya"),new boardEntry(56,"my mom"),new boardEntry(50, "my dad"),
+            new boardEntry(46,"chloey"), new boardEntry(52,"emma"), new boardEntry(45,"henry"),
+            new boardEntry(51, "annie")));
 
     private final String[] warpedMikas = {"warpedMikas/Mikizzy.png","warpedMikas/Mikbala.png",
             "warpedMikas/Mikulia.png","warpedMikas/Mikailee.png","warpedMikas/Mikaitlyn.png",
@@ -47,7 +48,10 @@ public class Main extends PApplet{
             "warpedMikas/Mikanya.png","warpedMikas/Mikaika.png","warpedMikas/Mikorah.png",
             "warpedMikas/Mikreyson.png","warpedMikas/Mikeveryone.png", "Warped Mikas"};
 
-    private final ArrayList<boardEntry> warpedMikasBoardEntries = new ArrayList<>(Arrays.asList(new boardEntry(51,"anya"), new boardEntry(999, "my dad")));
+    private final ArrayList<boardEntry> warpedMikasBoardEntries = new ArrayList<>(Arrays.asList(new boardEntry(51,"anya"),
+            new boardEntry(999, "my dad"), new boardEntry(51,"chloey"), new boardEntry(44,"mika"),
+            new boardEntry(71,"zoe"), new boardEntry(45,"diya"), new boardEntry(999,"tucker"),
+            new boardEntry(110,"michelle"), new boardEntry(68,"my little sister")));
 
     private final String[] typesOfCats = {"typesOfCats/Calico.png", "typesOfCats/AmericanShorthair.png",
             "typesOfCats/Ginger.png","typesOfCats/Naked.png","typesOfCats/Siamese.png",
@@ -55,7 +59,9 @@ public class Main extends PApplet{
             "typesOfCats/Tortie.png","typesOfCats/EgyptianMau.png","typesOfCats/RussianBlue.png",
             "typesOfCats/Beluga.png","typesOfCats/Toothless.png", "Cats"};
 
-    private final ArrayList<boardEntry> typesOfCatsBoardEntries = new ArrayList<>(Arrays.asList(new boardEntry(44,"anya"), new boardEntry(59, "my dad")));
+    private final ArrayList<boardEntry> typesOfCatsBoardEntries = new ArrayList<>(Arrays.asList(new boardEntry(41,"anya"),
+            new boardEntry(59, "my dad"), new boardEntry(49,"mika"), new boardEntry(63,"emma"),
+            new boardEntry(71,"henry"), new boardEntry(53,"annie")));
 
 
     //helpful booleans
@@ -622,7 +628,7 @@ public class Main extends PApplet{
                     }
                 }
             } else if (ENDSCREEN) {
-                if (mouseX >= 215 && mouseX <= 385 && mouseY >= 558 && mouseY <= 602) {
+                if (!enterName && mouseX >= 215 && mouseX <= 385 && mouseY >= 558 && mouseY <= 602) {
                     reset();
                 }
                 if (page1 && mouseX >= 315 && mouseX <= 385 && mouseY >= 359 && mouseY <= 381) {
